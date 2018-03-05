@@ -13,9 +13,18 @@ Required Pillow :
 	```
 
 example : `qr "mydirectory/myfile.mp3" > title.png`
-	
 
-## QR code reader :
+## CD encoding :
+
+use abcde tool:
+	```
+	sudo apt-get install abcde cd-discid lame cdparanoia id3 id3v2 eyed3
+	```
+remark : it requires postfix package which will prompt for e-mail setting configuration. Ask for no configuration and use [space] to validate your selection.
+
+detail: https://doc.ubuntu-fr.org/abcde
+
+## QR code reader required on your raspberry :
 
 Use zbar tool :
 	```
@@ -27,3 +36,6 @@ usage :
 	zbarcam --prescale=300x200
 	```	
 	Put your QR code in front of your webcam --> you should get "mydirectory/myfile.mp3" printed on stdout
+
+
+
