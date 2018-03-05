@@ -24,6 +24,15 @@ remark : it requires postfix package which will prompt for e-mail setting config
 
 detail: https://doc.ubuntu-fr.org/abcde
 
+usage :
+
+	```
+	cp /etc/abcde.conf ./
+	vi abcde.conf
+	...
+	abcde -c abcde.conf
+	```
+
 ## QR code reader required on your raspberry :
 
 Use zbar tool :
