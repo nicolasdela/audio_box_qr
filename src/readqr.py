@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python2
 
 from sys import argv
 import zbar
@@ -15,7 +15,8 @@ scanner.parse_config('enable')
 # obtain image data
 pil = Image.open(argv[1]).convert('L')
 width, height = pil.size
-raw = pil.tostring()
+#raw = pil.tostring()
+raw = pil.tobytes()
 
 # wrap image data
 image = zbar.Image(width, height, 'Y800', raw)
@@ -26,7 +27,7 @@ scanner.scan(image)
 # extract results
 for symbol in image:
     # do something useful with results
-    print 'decoded ', symbol.type, ' symbol ', '"%s"' % symbol.data
+    print('decoded ', symbol.type, ' symbol ', '"%s"' % symbol.data)
 
 # clean up
 del(image)
