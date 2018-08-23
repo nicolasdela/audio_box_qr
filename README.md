@@ -44,5 +44,13 @@ usage :
 
 Put your QR code in front of your webcam --> you should get "mydirectory/myfile.mp3" printed on stdout
 
+In order to be able to use zbar in python code :
+
+``` 
+sudo apt-get install libzbar-dev
+pip install zbar
+```
+
+
 
 
